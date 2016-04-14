@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// 3rd party
+@import
+  "partials/abstracts/variables",
+  "vendor/normalize",
+  "vendor/mq",
+  "../vendor/flex-sass-grid-generator/src/scss/flex-sass-grid-generator";
+
+// Abstracts
+@import
+  "partials/abstracts/functions",
+  "partials/abstracts/mixins",
+  "partials/abstracts/placeholders",
+  "partials/abstracts/helpers",
+  "partials/abstracts/png-sprite";
+
+// Base
+@import
+  "partials/base/typography",
+  "partials/base/template";
+
+// Components
+@import
+  "partials/components/header",
+  "partials/components/footer";
