@@ -6,16 +6,10 @@
 
 const
     gulp = require('gulp'),
-    config = require('../config'),
-    plumber = require('gulp-plumber'),
-    gutil = require('gulp-util'),
+    config = require('../config').paths,
     ghPages = require('gulp-gh-pages');
 
 gulp.task('gh-pages', () => {
-    return gulp.src(config.paths.dist + '**/*')
-        .pipe(plumber(function(error) {
-            gutil.log(gutil.colors.red(error.message));
-            this.emit('end');
-        }))
+    return gulp.src(config.dist + '**/*')
         .pipe(ghPages(config.ghpOptions));
 });
