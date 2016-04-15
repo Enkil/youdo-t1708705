@@ -11,5 +11,5 @@ const
 
 gulp.task('gh-pages', () => {
     return gulp.src(config.dist + '**/*')
-        .pipe(ghPages(config.ghpOptions));
+        .pipe(ghPages(config.gitRepository));
 });

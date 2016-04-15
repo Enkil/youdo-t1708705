@@ -7,8 +7,7 @@ const
     gulp =          require('gulp'),
     config =        require('../config').html,
     prettify =      require('gulp-prettify'),
-    jade =          require('gulp-jade'),
-    jadeInherit =   require('gulp-jade-inheritance'),
+    pug =           require('gulp-pug'),
     pugDoc =        require('pug-doc'),
     pugDocHTML =    require('pug-doc-html'),
     gulpif =        require('gulp-if'),
@@ -20,23 +19,22 @@ const
     reload =        browserSync.reload;
 
 gulp.task('html', (cb) => {
-    return gulp.src(config.src + '/**/!(_)*.jade')
+    return gulp.src(config.src + '/**/!(_)*.pug')
         .pipe(plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
         .pipe(gulpif(devBuild, changed(config.dest)))
-        .pipe(jadeInherit({basedir: config.src}))
-        .pipe(jade(config.params))
+        .pipe(pug(config.params))
         .pipe(gulp.dest(config.dest))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('HTML');
         });
     // const htmlDocJson = new pugDoc({
-    //     input: config.src  + '**/*.jade',
+    //     input: config.src  + '**/*.pug',
     //     output: config.dest + 'htmldoc.json'
-    // })
+    // });
     // const htmlDoc = new PugDocHTML({
     //     input: config.dest + 'htmldoc.json',
     //     output: 'output.html'

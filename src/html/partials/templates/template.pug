@@ -5,16 +5,16 @@
 doctype
 html(lang='ru', prefix='og: http://ogp.me/ns#')
 
-    include ../components/_head
+    include ../components/_head.pug
 
     body
 
-        include ../components/header
+        include ../components/header.pug
 
         main
             block content
 
-        include ../components/footer
+        include ../components/footer.pug
 
         .svg-sprite._hide
             //include ../../../dist/svg/sprite/sprite.svg

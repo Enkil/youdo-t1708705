@@ -19,7 +19,7 @@ const
 
 module.exports = {
 
-    ghpOptions: {
+    gitRepository: {
         remoteUrl: "git@github.com:Enkil/front-kit.git"
     },
     

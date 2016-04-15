@@ -10,7 +10,7 @@ const
     configHTML =    require('../config').html,
     configJS =      require('../config').js,
     sass =          require('gulp-sass'),
-    minifycss =     require('gulp-minify-css'),
+    minifycss =     require('gulp-clean-css'),
     csscomb =       require('gulp-csscomb'),
     concat =        require('gulp-concat'),
     combineMq =     require('gulp-combine-mq'),
