@@ -3,7 +3,7 @@
  */
 'use strict';
 
-const gulp =              require('gulp'),
+const gulp =            require('gulp'),
     config =            require('../config').svgSprite,
     svgstore =          require('gulp-svgstore'),
     svgmin =            require('gulp-svgmin'),
@@ -23,7 +23,7 @@ gulp.task('svg-sprite', () => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(devBuild, changed(config.dest)))
+        .pipe(gulpif(devBuild, changed(config.build)))
         .pipe(svgmin())
         .pipe(svgstore())
         .pipe(cheerio({
@@ -33,7 +33,7 @@ gulp.task('svg-sprite', () => {
             },
             parserOptions: { xmlMode: true }
         }))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('SVG sprite');

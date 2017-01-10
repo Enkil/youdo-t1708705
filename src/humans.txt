@@ -18,6 +18,6 @@
 	Language: Russian
 	Doctype: HTML5
 	Standards: HTML5, CSS3
-	Components: Sass, Jade, JavaScript, Normalize.css, SVG
+	Components: Sass, Jade/Pug, JavaScript, Normalize.css, SVG
 	IDE: PhpShtorm, Sublime Text
     Software: Gulp, Git, GitHub Pages, Photoshop, Illustrator

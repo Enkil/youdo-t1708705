@@ -18,7 +18,7 @@ const
 
 gulp.task('bower', () => {
     var jsFilter = gulpFilter(['**/*.js'], {restore: true}),
-        cssFilter = gulpFilter(['**/*.{css,scss,sass}'], {restore: true});
+        cssFilter = gulpFilter(['**/*.{css,scss}'], {restore: true});
 
     return gulp.src(mainBowerFiles({
             includeDev: true,

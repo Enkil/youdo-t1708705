@@ -21,12 +21,12 @@ gulp.task('svg',(cb) => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(devBuild, changed(config.dest)))
+        .pipe(gulpif(devBuild, changed(config.build)))
         .pipe(gulpif(!devBuild, imagemin({
             multipass: true,
             optimizationLevel: 7
         })))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('SVG');

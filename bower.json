@@ -17,6 +17,6 @@
     "flex-sass-grid-generator": "~0.8.0"
   },
   "dependencies": {
-
+    "animate.css": "^3.5.2"
   }
 }

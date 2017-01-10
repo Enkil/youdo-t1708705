@@ -9,7 +9,7 @@ const
     gulpSequence =  require('gulp-sequence');
 
 gulp.task('build', (cb) => {
-    var tasks = ['clean', 'bower', 'fonts', 'css', 'js', 'img', 'svg', 'png-sprite', 'svg-sprite','html', 'txt', 'styleguide', 'zip'];
+    var tasks = ['clean', 'bower', 'fonts', 'css', 'js', 'img', 'svg', 'png-sprite', 'svg-sprite','html', 'txt', 'zip'];
     tasks.push(cb);
     gulpSequence.apply(this, tasks);     
     notifier('Build');

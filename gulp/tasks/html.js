@@ -8,8 +8,6 @@ const
     config =        require('../config').html,
     prettify =      require('gulp-prettify'),
     pug =           require('gulp-pug'),
-    pugDoc =        require('pug-doc'),
-    pugDocHTML =    require('pug-doc-html'),
     gulpif =        require('gulp-if'),
     changed =       require('gulp-changed'),
     notifier =      require('../helpers/notifier'),
@@ -24,19 +22,11 @@ gulp.task('html', (cb) => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(devBuild, changed(config.dest)))
+        .pipe(gulpif(devBuild, changed(config.build)))
         .pipe(pug(config.params))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('HTML');
         });
-    // const htmlDocJson = new pugDoc({
-    //     input: config.src  + '**/*.pug',
-    //     output: config.dest + 'htmldoc.json'
-    // });
-    // const htmlDoc = new PugDocHTML({
-    //     input: config.dest + 'htmldoc.json',
-    //     output: 'output.html'
-    // });
 });

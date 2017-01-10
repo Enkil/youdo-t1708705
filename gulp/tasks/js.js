@@ -31,7 +31,7 @@ gulp.task('js', () => {
         .pipe(gulpBrowser.browserify())
         .pipe(gulpif(!devBuild, uglify()))
         .pipe(gulpif(devBuild, sourcemaps.write(config.maps)))
-        .pipe(gulp.dest(configJS.dest))
+        .pipe(gulp.dest(configJS.build))
         .pipe(reload({stream: true}));
 
     return stream;

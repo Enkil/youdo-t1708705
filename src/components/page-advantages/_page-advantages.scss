@@ -1,0 +1,37 @@
+section.page-advantages{
+
+  &:after{
+    content: '';
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color:$main-bg;
+  }
+
+  .action{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}
+
+article.advantage-block{
+  text-align: center;
+  
+  img{
+    
+  }
+  h3{
+    @include font-family('Gothic-Regular');
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  p{
+    @include font-family('Gothic-Regular');
+    margin-bottom: 50px;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}

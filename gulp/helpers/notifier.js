@@ -10,13 +10,13 @@ module.exports = function(file, isFail, msg) {
         color = isFail ? 'red' : 'green';
         // icon  = isFail ? path.join(__dirname, 'coulson.jpg') : false;
     
-    if (devBuild) notifier.notify({
-        title   : file,
-        message : say,
-        // icon    : icon,
-        sound   : true,
-        wait: true
-    });
+    // if (devBuild) notifier.notify({
+    //     title   : file,
+    //     message : say,
+    //     // icon    : icon,
+    //     sound   : false,
+    //     wait: false
+    // });
     
 
     gutil.log(say, gutil.colors[color](file));

@@ -24,14 +24,14 @@ gulp.task('img',(cb) => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(devBuild, changed(config.dest)))
+        .pipe(gulpif(devBuild, changed(config.build)))
         .pipe(gulpif(!devBuild, imagemin({
             progressive: true,
             optimizationLevel: 7,
             use: [pngquant(),jpegoptim({max: 95}),imageminGifsicle({interlaced: false})],
             interlaced: true
         })))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('Images');

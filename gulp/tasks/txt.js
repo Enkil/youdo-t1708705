@@ -20,8 +20,8 @@ gulp.task('txt', () => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(devBuild, changed(config.dest)))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulpif(devBuild, changed(config.build)))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('Text files');

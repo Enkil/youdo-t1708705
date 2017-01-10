@@ -1,0 +1,112 @@
+.page-header{
+  background-color: $main-bg;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+
+  .contacts{
+    display: flex;
+    flex-direction: column;
+
+    a.link{
+      @include font-family('MinionPro-Regular');
+      line-height: 1;
+      color: lighten($main-text,15%);
+      text-decoration: none;
+      &.-phone{
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      &.-email{
+        font-size: 24px;
+      }
+    }
+  }
+
+  ul.menu{
+    padding-left: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    li.item{
+      //display: inline-block;
+      width: 115px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      a.link{
+        @include font-family('MinionPro-Regular');
+        @include transition();
+        line-height: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: $main-text;
+        text-decoration: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span{
+          margin-top: 20px;
+        }
+        &.-emergency span{
+          margin-top: 5px;
+        }
+
+        &:before{
+          content: '';
+          display: block;
+        }
+
+        &.-emergency:before{
+          @include sprite($s-emergency);
+        }
+        &.-about:before{
+          @include sprite($s-about);
+        }
+        &.-building:before{
+          @include sprite($s-building);
+        }
+        &.-justice:before{
+          @include sprite($s-justice);
+        }
+        &.-advantages:before{
+          @include sprite($s-advantages);
+        }
+        &.-contacts:before{
+          @include sprite($s-contacts);
+        }
+
+        &.-emergency:hover{
+          transform: scale(1.2);
+        }
+        &.-about:hover:before{
+          @include sprite($s-about-hover);
+        }
+        &.-building:hover:before{
+          @include sprite($s-building-hover);
+        }
+        &.-justice:hover:before{
+          @include sprite($s-justice-hover);
+        }
+        &.-advantages:hover:before{
+          @include sprite($s-advantages-hover);
+        }
+        &.-contacts:hover:before{
+          @include sprite($s-contacts-hover);
+        }
+
+      }
+    }
+  }
+}

@@ -2,25 +2,30 @@
 
 // 3rd party
 @import
-  "partials/abstracts/variables",
+  "variables",
   "vendor/normalize",
   "vendor/mq",
-  "../vendor/flex-sass-grid-generator/src/scss/flex-sass-grid-generator";
+  "../vendor/flex-sass-grid-generator/src/scss/flex-sass-grid-generator",
+  "vendor/_animate.scss";
 
 // Abstracts
 @import
-  "partials/abstracts/functions",
-  "partials/abstracts/mixins",
-  "partials/abstracts/placeholders",
-  "partials/abstracts/helpers",
-  "partials/abstracts/png-sprite";
+  "functions",
+  "mixins",
+  "placeholders",
+  "helpers",
+  "png-sprite";
 
 // Base
 @import
-  "partials/base/typography",
-  "partials/base/template";
+  "typography",
+  "page-template";
 
-// Components
-@import
-  "partials/components/header",
-  "partials/components/footer";
+// Blocks
+@import "../components/page-header/page-header";
+@import "../components/lead-banner/lead-banner";
+@import "../components/page-text/page-text";
+@import "../components/btn/btn";
+@import "../components/page-services/page-services";
+@import "../components/page-advantages/page-advantages";
+@import "../components/page-footer/page-footer";

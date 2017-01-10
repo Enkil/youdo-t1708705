@@ -1,0 +1,10 @@
+include ../btn/_mixin-btn.pug
+
+mixin service(title,img,text)
+    figure.service-block
+        .front
+            h3!= title
+            img(src="img/pics/" + img alt=title).img
+        figcaption.caption
+            p!= text
+            +btn("Получить консультацию",'javascript:void(0)')

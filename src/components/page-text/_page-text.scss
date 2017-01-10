@@ -1,0 +1,16 @@
+.page-text{
+
+  &:after{
+    content: '';
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color:$main-bg;
+  }
+
+  .action{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}

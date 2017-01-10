@@ -30,10 +30,10 @@ const
     cssProdBuild = lazypipe()
         .pipe(rename,{ suffix: '.min' })
         .pipe(minifycss)
-        .pipe(gulp.dest,configCSS.dest)
+        .pipe(gulp.dest,configCSS.build)
         .pipe(rename,{ basename: 'app', suffix: '.purify' })
-        .pipe(purify,[configHTML.dest + '**/*.html', configJS.dest + '**/*.js'])
-        .pipe(gulp.dest,configCSS.dest)
+        .pipe(purify,[configHTML.build + '**/*.html', configJS.build + '**/*.js'])
+        .pipe(gulp.dest,configCSS.build)
         .pipe(rename,{ suffix: '.min' })
         .pipe(minifycss);
 
@@ -49,10 +49,10 @@ gulp.task('css', () => {
         .pipe(autoprefixer(configCSS.autoprefixer))
         .pipe(csscomb())
         .pipe(combineMq({beautify: true}))
-        .pipe(gulp.dest(configCSS.dest))
+        .pipe(gulp.dest(configCSS.build))
         .pipe(gulpif(!devBuild, cssProdBuild()))
         .pipe(sourcemaps.write(config.maps))
-        .pipe(gulp.dest(configCSS.dest))
+        .pipe(gulp.dest(configCSS.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('CSS');

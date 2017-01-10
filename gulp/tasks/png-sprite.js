@@ -22,7 +22,7 @@ gulp.task('png-sprite', () => {
     var spriteData = gulp.src(config.src)
         .pipe(spritesmith({
             imgName: 'png-sprite.png',
-            imgPath: config.dest + 'png-sprite.png',
+            imgPath: config.imgPath + 'png-sprite.png',
             padding: 1,
             cssFormat: 'scss_maps',
             algorithm: 'binary-tree',
@@ -38,7 +38,7 @@ gulp.task('png-sprite', () => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}));
 
     // Pipe CSS stream onto disk

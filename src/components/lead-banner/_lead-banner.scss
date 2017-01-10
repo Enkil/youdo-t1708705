@@ -1,0 +1,39 @@
+.lead-banner{
+  height: 620px;
+  background-image: url(../img/pics/banner.png);
+  margin-top: 130px;
+  background-size: cover;
+  margin-bottom: 60px;
+
+  &:after{
+    content: '';
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color:$main-bg;
+  }
+
+  .logo{
+    display: inline-block;
+  }
+
+  .text{
+    margin-bottom: 80px;
+    width: 75%;
+
+    span{
+      @include font-family('Gothic-Regular');
+      color: $second-text;
+      font-size: 48px;
+      display: block;
+      &:first-child{
+        text-align: right;
+        margin-right: 40px;
+      }
+      &:last-child{
+        color: $main-bg;
+        text-align: right;
+      }
+    }
+  }
+}

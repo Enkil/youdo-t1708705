@@ -10,6 +10,6 @@ const
     ghPages = require('gulp-gh-pages');
 
 gulp.task('gh-pages', () => {
-    return gulp.src(config.dist + '**/*')
+    return gulp.src(config.build + '**/*')
         .pipe(ghPages(config.gitRepository));
 });

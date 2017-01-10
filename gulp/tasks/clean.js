@@ -11,6 +11,6 @@ var gulp =          require('gulp'),
 
 
 gulp.task('clean', () => {
-    del(config.dist);
-    notifier('Build');
+    del(config.build);
+    notifier('Clean');
 });

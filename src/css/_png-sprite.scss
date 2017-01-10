@@ -1,0 +1,211 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: map-get($icon-home, 'width');
+}
+
+At the bottom of this section, we provide information about the spritesheet itself
+*/
+$s-about-hover: (
+  name: 's-about-hover',
+  x: 65px,
+  y: 0px,
+  offset-x: -65px,
+  offset-y: 0px,
+  width: 48px,
+  height: 57px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-about: (
+  name: 's-about',
+  x: 114px,
+  y: 0px,
+  offset-x: -114px,
+  offset-y: 0px,
+  width: 48px,
+  height: 57px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-advantages-hover: (
+  name: 's-advantages-hover',
+  x: 163px,
+  y: 0px,
+  offset-x: -163px,
+  offset-y: 0px,
+  width: 52px,
+  height: 52px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-advantages: (
+  name: 's-advantages',
+  x: 0px,
+  y: 65px,
+  offset-x: 0px,
+  offset-y: -65px,
+  width: 52px,
+  height: 52px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-building-hover: (
+  name: 's-building-hover',
+  x: 53px,
+  y: 65px,
+  offset-x: -53px,
+  offset-y: -65px,
+  width: 52px,
+  height: 52px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-building: (
+  name: 's-building',
+  x: 106px,
+  y: 65px,
+  offset-x: -106px,
+  offset-y: -65px,
+  width: 52px,
+  height: 52px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-contacts-hover: (
+  name: 's-contacts-hover',
+  x: 0px,
+  y: 118px,
+  offset-x: 0px,
+  offset-y: -118px,
+  width: 52px,
+  height: 42px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-contacts: (
+  name: 's-contacts',
+  x: 163px,
+  y: 53px,
+  offset-x: -163px,
+  offset-y: -53px,
+  width: 52px,
+  height: 52px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-emergency: (
+  name: 's-emergency',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 64px,
+  height: 64px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-justice-hover: (
+  name: 's-justice-hover',
+  x: 0px,
+  y: 161px,
+  offset-x: 0px,
+  offset-y: -161px,
+  width: 45px,
+  height: 45px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-justice: (
+  name: 's-justice',
+  x: 46px,
+  y: 161px,
+  offset-x: -46px,
+  offset-y: -161px,
+  width: 45px,
+  height: 45px,
+  total-width: 215px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$spritesheet: (
+  width: 215px,
+  height: 206px,
+  image: '../img/sprite/png-sprite.png',
+  sprites: ($s-about-hover, $s-about, $s-advantages-hover, $s-advantages, $s-building-hover, $s-building, $s-contacts-hover, $s-contacts, $s-emergency, $s-justice-hover, $s-justice, )
+);
+
+/*
+The provided mixins are intended to be used with variables directly
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: map-get($sprite, 'width');
+}
+
+@mixin sprite-height($sprite) {
+  height: map-get($sprite, 'height');
+}
+
+@mixin sprite-position($sprite) {
+  background-position: map-get($sprite, 'offset-x') map-get($sprite, 'offset-y');
+}
+
+@mixin sprite-image($sprite) {
+  background-image: url(map-get($sprite, 'image'));
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites(map-get($spritesheet, 'sprites'));
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: map-get($sprite, 'name');
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

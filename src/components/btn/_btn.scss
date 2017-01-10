@@ -1,0 +1,28 @@
+a.btn{
+  display: inline-block;
+  background-color: $btn-bg;
+  text-decoration: none;
+  padding-left: 45px;
+  padding-right: 45px;
+  border-radius: 10px;
+  height: 80px;
+  line-height: 90px;
+  box-shadow: 0 4px 0 1px darken($btn-bg, 20%);
+  outline: none;
+  color: $second-text;
+
+  &:hover{
+    background-color: lighten($btn-bg, 5%);
+  }
+  &:active{
+    box-shadow: none;
+    box-sizing: content-box;
+    top: 4px;
+    position: relative;
+  }
+
+  span{
+    @include font-family('MinionPro-Regular');
+    font-size: 36px;
+  }
+}

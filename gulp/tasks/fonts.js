@@ -6,7 +6,6 @@
 const
     gulp =          require('gulp'),
     config =        require('../config').fonts,
-    changed =       require('gulp-changed'),
     notifier =      require('../helpers/notifier'),
     gutil =         require('gulp-util'),
     plumber =       require('gulp-plumber'),
@@ -19,8 +18,7 @@ gulp.task('fonts', () => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(changed(config.dest))
-        .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}))
         .on('end', function() {
             notifier('Fonts');

@@ -1,0 +1,22 @@
+@include font-face('Airport-Regular', airport, regular, Airport);
+@include font-face('Bookos-Regular', bookos, regular, BOOKOS);
+@include font-face('Gothic-Regular', gothic, regular, GOTHIC);
+@include font-face('MinionPro-Regular', minion-pro, regular, MinionPro-Regular);
+@include font-face('Calibri-Regular', calibri, regular, calibri);
+
+h2.h2-title{
+  @include font-family('Bookos-Regular');
+  text-align: center;
+  font-size: 48px;
+  line-height: 48px;
+  margin-top: 48px;
+  margin-bottom: 65px;
+}
+
+p.text{
+  @include font-family('Calibri-Regular');
+  font-size: 30px;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+}
