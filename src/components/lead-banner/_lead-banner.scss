@@ -5,6 +5,14 @@
   background-size: cover;
   margin-bottom: 60px;
 
+  @include mq($from: xs, $until: md) {
+    margin-top: 0;
+  }
+
+  @include mq($from: md, $until: lg) {
+    margin-top: 123px;
+  }
+
   &:after{
     content: '';
     display: block;
@@ -26,6 +34,9 @@
       color: $second-text;
       font-size: 48px;
       display: block;
+      @include mq($from: xs, $until: sm) {
+        font-size: 30px;
+      }
       &:first-child{
         text-align: right;
         margin-right: 40px;

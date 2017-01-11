@@ -1,0 +1,15 @@
+mixin page-form(type,text,extraClass)
+    form(class="page-form " + extraClass method="post" action="form.php")
+        div.form
+            h4!=text
+            label.-name
+                input(type="text" name="name"  placeholder="Ваше имя" required)
+            label.-phone
+                input(type="tel" name="phone" placeholder="+7(999)999-99-99" required)
+            label
+                input(type="hidden" name="formname" value=type)
+            button Заказать звонок
+        p.success.
+            Спасибо за обращение!
+            <br>
+            Наш специалист свяжется с вами.

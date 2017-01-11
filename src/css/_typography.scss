@@ -11,6 +11,9 @@ h2.h2-title{
   line-height: 48px;
   margin-top: 48px;
   margin-bottom: 65px;
+  @include mq($from: xs, $until: sm) {
+    font-size: 40px;
+  }
 }
 
 p.text{

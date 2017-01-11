@@ -1,0 +1,147 @@
+form.page-form{
+
+  h4, p.success{
+    @include font-family('Calibri-Regular');
+    font-size: 24px;
+    color: $second-text;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p.success{
+    display: none;
+  }
+
+  &.-footer{
+
+    h4{
+      @include font-family('MinionPro-Regular');
+      font-size: 18px;
+      color: $second-text;
+    }
+  }
+
+  &.-modal{
+    margin-top: 50px;
+  }
+
+  label{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    &:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 20px;
+
+    }
+    &.-name:before{
+      @include sprite($s-man);
+      top: calc(50% - 13px)
+    }
+    &.-phone:before{
+      @include sprite($s-phone-grey);
+      top: calc(50% - 16px)
+    }
+  ;
+  }
+
+  input{
+    height: 55px;
+    display: block;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 55px;
+    box-sizing: border-box;
+    @include font-family('MinionPro-Regular');
+    font-size: 18px;
+    color: $main-text;
+    border-radius: 10px;
+    border-color: transparent;
+    outline: none;
+    &::placeholder{
+      @include font-family('MinionPro-Regular');
+      font-size: 18px;
+      color: $main-text;
+    }
+
+    &.-error{
+      background-color: $danger;
+    }
+    &.-valid{
+      background-color: lighten($success, 25%);
+    }
+  }
+
+  button{
+    @include font-family('MinionPro-Regular');
+    font-size: 36px;
+    display: inline-block;
+    background-color: $btn-bg;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 0 4px 0 1px darken($btn-bg, 20%);
+    outline: none;
+    color: $second-text;
+    border-color: transparent;
+
+    @include mq($from: xs, $until: sm) {
+      font-size: 30px;
+    }
+
+    &:hover{
+      background-color: lighten($btn-bg, 5%);
+    }
+    &:active{
+      box-shadow: none;
+      top: 4px;
+      position: relative;
+    }
+  }
+}
+
+.modal-block{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,.5);
+
+  .modal{
+    border: 5px solid #b6777d ;
+    background-color: rgba(0,0,0,.65);
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  span.close{
+    @include sprite($s-modal-close);
+    @include transition();
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    cursor: pointer;
+    opacity: .7;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+}

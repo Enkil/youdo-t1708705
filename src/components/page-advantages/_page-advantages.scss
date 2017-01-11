@@ -27,11 +27,17 @@ article.advantage-block{
     margin-top: 5px;
     font-size: 20px;
     font-weight: bold;
+    @include mq($from: sm, $until: md) {
+      font-size: 15px;
+    }
   }
   p{
     @include font-family('Gothic-Regular');
     margin-bottom: 50px;
     margin-top: 5px;
     font-size: 18px;
+    @include mq($from: sm, $until: md) {
+      font-size: 12px;
+    }
   }
 }

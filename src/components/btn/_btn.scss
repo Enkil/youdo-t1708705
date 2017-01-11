@@ -2,11 +2,10 @@ a.btn{
   display: inline-block;
   background-color: $btn-bg;
   text-decoration: none;
-  padding-left: 45px;
-  padding-right: 45px;
+  width: 100%;
   border-radius: 10px;
   height: 80px;
-  line-height: 90px;
+  line-height: 80px;
   box-shadow: 0 4px 0 1px darken($btn-bg, 20%);
   outline: none;
   color: $second-text;
@@ -24,5 +23,8 @@ a.btn{
   span{
     @include font-family('MinionPro-Regular');
     font-size: 36px;
+    @include mq($from: xs, $until: 340px) {
+      font-size: 30px;
+    }
   }
 }

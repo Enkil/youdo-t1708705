@@ -15,7 +15,7 @@ $s-about-hover: (
   offset-y: 0px,
   width: 48px,
   height: 57px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -27,7 +27,7 @@ $s-about: (
   offset-y: 0px,
   width: 48px,
   height: 57px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -39,7 +39,7 @@ $s-advantages-hover: (
   offset-y: 0px,
   width: 52px,
   height: 52px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -51,7 +51,7 @@ $s-advantages: (
   offset-y: -65px,
   width: 52px,
   height: 52px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -63,7 +63,7 @@ $s-building-hover: (
   offset-y: -65px,
   width: 52px,
   height: 52px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -75,7 +75,7 @@ $s-building: (
   offset-y: -65px,
   width: 52px,
   height: 52px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -87,7 +87,7 @@ $s-contacts-hover: (
   offset-y: -118px,
   width: 52px,
   height: 42px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -99,7 +99,19 @@ $s-contacts: (
   offset-y: -53px,
   width: 52px,
   height: 52px,
-  total-width: 215px,
+  total-width: 235px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-email: (
+  name: 's-email',
+  x: 53px,
+  y: 118px,
+  offset-x: -53px,
+  offset-y: -118px,
+  width: 37px,
+  height: 25px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -111,7 +123,7 @@ $s-emergency: (
   offset-y: 0px,
   width: 64px,
   height: 64px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -123,7 +135,7 @@ $s-justice-hover: (
   offset-y: -161px,
   width: 45px,
   height: 45px,
-  total-width: 215px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
@@ -135,15 +147,63 @@ $s-justice: (
   offset-y: -161px,
   width: 45px,
   height: 45px,
-  total-width: 215px,
+  total-width: 235px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-man: (
+  name: 's-man',
+  x: 140px,
+  y: 161px,
+  offset-x: -140px,
+  offset-y: -161px,
+  width: 24px,
+  height: 26px,
+  total-width: 235px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-modal-close: (
+  name: 's-modal-close',
+  x: 113px,
+  y: 161px,
+  offset-x: -113px,
+  offset-y: -161px,
+  width: 26px,
+  height: 26px,
+  total-width: 235px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-phone-grey: (
+  name: 's-phone-grey',
+  x: 216px,
+  y: 0px,
+  offset-x: -216px,
+  offset-y: 0px,
+  width: 19px,
+  height: 33px,
+  total-width: 235px,
+  total-height: 206px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-phone: (
+  name: 's-phone',
+  x: 92px,
+  y: 161px,
+  offset-x: -92px,
+  offset-y: -161px,
+  width: 20px,
+  height: 37px,
+  total-width: 235px,
   total-height: 206px,
   image: '../img/sprite/png-sprite.png'
 );
 $spritesheet: (
-  width: 215px,
+  width: 235px,
   height: 206px,
   image: '../img/sprite/png-sprite.png',
-  sprites: ($s-about-hover, $s-about, $s-advantages-hover, $s-advantages, $s-building-hover, $s-building, $s-contacts-hover, $s-contacts, $s-emergency, $s-justice-hover, $s-justice, )
+  sprites: ($s-about-hover, $s-about, $s-advantages-hover, $s-advantages, $s-building-hover, $s-building, $s-contacts-hover, $s-contacts, $s-email, $s-emergency, $s-justice-hover, $s-justice, $s-man, $s-modal-close, $s-phone-grey, $s-phone, )
 );
 
 /*

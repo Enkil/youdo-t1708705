@@ -8,6 +8,10 @@
   left: 0;
   z-index: 10;
 
+  @include mq($from: xs, $until: md) {
+    position: static;
+  }
+
   .contacts{
     display: flex;
     flex-direction: column;
@@ -17,13 +21,21 @@
       line-height: 1;
       color: lighten($main-text,15%);
       text-decoration: none;
+
+
       &.-phone{
         font-size: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
+        @include mq($from: md, $until: lg) {
+          font-size: 20px;
+        }
       }
       &.-email{
         font-size: 24px;
+        @include mq($from: md, $until: lg) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -55,6 +67,13 @@
         text-decoration: none;
         flex-direction: column;
         cursor: pointer;
+        font-size: 19px;
+        @include mq($from: lg, $until: 1280px) {
+          font-size: 16px;
+        }
+        @include mq($from: md, $until: lg) {
+          font-size: 12px;
+        }
 
         span{
           margin-top: 20px;

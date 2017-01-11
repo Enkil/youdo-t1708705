@@ -7,4 +7,4 @@ mixin service(title,img,text)
             img(src="img/pics/" + img alt=title).img
         figcaption.caption
             p!= text
-            +btn("Получить консультацию",'javascript:void(0)')
+            +btn("Получить консультацию",'javascript:void(0)','','js-openModal')

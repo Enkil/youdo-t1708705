@@ -38,6 +38,9 @@ figure.service-block{
     margin: 0;
     position: relative;
     z-index: 5;
+    @include mq($from: xs, $until: xl) {
+      font-size: 40px;
+    }
   }
 
   img.img{
@@ -47,6 +50,7 @@ figure.service-block{
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
   }
 
   figcaption.caption{
@@ -65,8 +69,29 @@ figure.service-block{
 
     p{
       color: $second-text;
-      font-size: 36px;
+      font-size: 32px;
       line-height: 1;
+      @include mq($from: sm, $until: 1280px) {
+        font-size: 28px;
+      }
+      @include mq($from: xs, $until: sm) {
+        font-size: 22px;
+      }
+    }
+
+    .btn span{
+      @include mq($from: lg, $until: 1280px) {
+        font-size: 30px;
+      }
+      @include mq($from: sm, $until: lg) {
+        font-size: 22px;
+      }
+      @include mq($from: xs, $until: sm) {
+        font-size: 20px;
+      }
+      @include mq($from: xs, $until: 340px) {
+        font-size: 18px;
+      }
     }
   }
 
