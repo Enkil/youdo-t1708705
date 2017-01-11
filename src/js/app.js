@@ -55,22 +55,22 @@ $(document).ready(function () {
 
     // Form Ajax sending
     form.submit (function(event) {
-        // _this = $(this);
-        if ($(this).valid())
+        var _this = $(this);
+        if (_this.valid())
         {
             $.ajax({
-                type: $(this).attr("method"),
-                url: $(this).attr("action"),
-                data: $(this).serialize(),
+                type: _this.attr("method"),
+                url: _this.attr("action"),
+                data: _this.serialize(),
                 success: function(data) {
                     console.log(data);
-                    $(this).find("button").text("Успешно");
-                    $(this)
+                    _this.find("button").text("Успешно");
+                    _this
                         .find("button")
                         .prop('disabled', true);
-                    $(this)[0].reset();
-                    $(this).find("div.form").css({'display': 'none'});
-                    $(this).find("p.success").css({'display': 'block'});
+                    _this[0].reset();
+                    _this.find("div.form").css({'display': 'none'});
+                    _this.find("p.success").css({'display': 'block'});
                 }
             });
         }

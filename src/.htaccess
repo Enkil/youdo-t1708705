@@ -13,10 +13,12 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # Enable Browser Cache
-<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
-    Header set Cache-Control "max-age=2592000"
-    FileETag None
-</FilesMatch>
+<IfModule mod_headers.c>
+	<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+	    Header set Cache-Control "max-age=2592000"
+	    FileETag None
+	</FilesMatch>
+</IfModule>
 
 <ifModule mod_expires.c>
   ExpiresActive On

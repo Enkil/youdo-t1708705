@@ -3,7 +3,7 @@ const
     requireDir =      require('require-dir');
 
 // Set Env
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'production';
 
 // Check ENV
 global.devBuild = process.env.NODE_ENV !== 'production';

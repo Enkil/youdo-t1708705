@@ -15,7 +15,7 @@ const
     _fonts =    'fonts/',                  // подкаталог, в котором находятся шрифты
     _maps =     '../maps/',                 // подкаталог, в котором находятся карты кода
     _docs =     'docs/',                    // подкаталог, в котором находится сгенерированная документация
-    _txtFrom =  ['src/humans.txt', 'src/robots.txt', 'src/.htaccess','src/img/favicon/manifest.json','src/img/favicon/browserconfig.xml','src/php/composer.json','src/php/form.php','src/php/functions.php','src/php/settings-sample.php','src/php/settings.php'];      // сопроводительные текстовые файлы
+    _txtFrom =  ['src/humans.txt', 'src/robots.txt', 'src/.htaccess','src/img/favicon/manifest.json','src/img/favicon/browserconfig.xml','src/php/composer.json','src/php/form.php','src/php/functions.php','src/php/settings-sample.php','src/php/settings.php','src/php/services/sypex.php','src/php/services/google.php'];      // сопроводительные текстовые файлы
 
 module.exports = {
 
@@ -46,7 +46,8 @@ module.exports = {
         src: _src + _html,
         build: _build,
         params: {
-            pretty: devBuild
+            // pretty: devBuild
+            pretty: true
         }
     },
     
