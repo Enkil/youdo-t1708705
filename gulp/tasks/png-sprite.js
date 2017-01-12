@@ -4,7 +4,7 @@
 'use strict';
 
 var gulp =                  require('gulp'),
-    gulpif =            require('gulp-if'),
+    gulpif =                require('gulp-if'),
     config =                require('../config').pngSprite,
     imagemin =              require('gulp-imagemin'),
     pngquant =              require('imagemin-pngquant'),
@@ -39,12 +39,6 @@ gulp.task('png-sprite', () => {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(gulpif(!devBuild, imagemin({
-            progressive: true,
-            optimizationLevel: 7,
-            use: [pngquant(),jpegoptim({max: 95}),imageminGifsicle({interlaced: false})],
-            interlaced: true
-        })))
         .pipe(gulp.dest(config.build))
         .pipe(reload({stream: true}));
 

@@ -16,10 +16,16 @@ h2.h2-title{
   }
 }
 
-p.text{
-  @include font-family('Calibri-Regular');
-  font-size: 30px;
-  line-height: 48px;
-  text-align: center;
-  margin: 0;
+div.text{
+  p{
+    @include font-family('Calibri-Regular');
+    font-size: 30px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  span.attention{
+    color: red;
+  }
 }

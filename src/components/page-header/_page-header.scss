@@ -30,6 +30,9 @@
         @include mq($from: md, $until: lg) {
           font-size: 20px;
         }
+        @include mq($from: xs, $until: md) {
+          font-size: 24px;
+        }
       }
       &.-email{
         font-size: 24px;

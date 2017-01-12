@@ -16,7 +16,7 @@ $s-about-hover: (
   width: 48px,
   height: 57px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-about: (
@@ -28,47 +28,11 @@ $s-about: (
   width: 48px,
   height: 57px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-advantages-hover: (
   name: 's-advantages-hover',
-  x: 163px,
-  y: 0px,
-  offset-x: -163px,
-  offset-y: 0px,
-  width: 52px,
-  height: 52px,
-  total-width: 235px,
-  total-height: 206px,
-  image: '../img/sprite/png-sprite.png'
-);
-$s-advantages: (
-  name: 's-advantages',
-  x: 0px,
-  y: 65px,
-  offset-x: 0px,
-  offset-y: -65px,
-  width: 52px,
-  height: 52px,
-  total-width: 235px,
-  total-height: 206px,
-  image: '../img/sprite/png-sprite.png'
-);
-$s-building-hover: (
-  name: 's-building-hover',
-  x: 53px,
-  y: 65px,
-  offset-x: -53px,
-  offset-y: -65px,
-  width: 52px,
-  height: 52px,
-  total-width: 235px,
-  total-height: 206px,
-  image: '../img/sprite/png-sprite.png'
-);
-$s-building: (
-  name: 's-building',
   x: 106px,
   y: 65px,
   offset-x: -106px,
@@ -76,23 +40,47 @@ $s-building: (
   width: 52px,
   height: 52px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
-$s-contacts-hover: (
-  name: 's-contacts-hover',
+$s-advantages: (
+  name: 's-advantages',
   x: 0px,
   y: 118px,
   offset-x: 0px,
   offset-y: -118px,
   width: 52px,
-  height: 42px,
+  height: 52px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
-$s-contacts: (
-  name: 's-contacts',
+$s-building-hover: (
+  name: 's-building-hover',
+  x: 0px,
+  y: 65px,
+  offset-x: 0px,
+  offset-y: -65px,
+  width: 52px,
+  height: 52px,
+  total-width: 235px,
+  total-height: 208px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-building: (
+  name: 's-building',
+  x: 53px,
+  y: 65px,
+  offset-x: -53px,
+  offset-y: -65px,
+  width: 52px,
+  height: 52px,
+  total-width: 235px,
+  total-height: 208px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-contacts-hover: (
+  name: 's-contacts-hover',
   x: 163px,
   y: 53px,
   offset-x: -163px,
@@ -100,19 +88,31 @@ $s-contacts: (
   width: 52px,
   height: 52px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
+  image: '../img/sprite/png-sprite.png'
+);
+$s-contacts: (
+  name: 's-contacts',
+  x: 163px,
+  y: 0px,
+  offset-x: -163px,
+  offset-y: 0px,
+  width: 52px,
+  height: 52px,
+  total-width: 235px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-email: (
   name: 's-email',
-  x: 53px,
+  x: 145px,
   y: 118px,
-  offset-x: -53px,
+  offset-x: -145px,
   offset-y: -118px,
   width: 37px,
   height: 25px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-emergency: (
@@ -124,55 +124,55 @@ $s-emergency: (
   width: 64px,
   height: 64px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-justice-hover: (
   name: 's-justice-hover',
-  x: 0px,
-  y: 161px,
-  offset-x: 0px,
-  offset-y: -161px,
+  x: 53px,
+  y: 118px,
+  offset-x: -53px,
+  offset-y: -118px,
   width: 45px,
   height: 45px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-justice: (
   name: 's-justice',
-  x: 46px,
-  y: 161px,
-  offset-x: -46px,
-  offset-y: -161px,
+  x: 99px,
+  y: 118px,
+  offset-x: -99px,
+  offset-y: -118px,
   width: 45px,
   height: 45px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-man: (
   name: 's-man',
-  x: 140px,
-  y: 161px,
-  offset-x: -140px,
-  offset-y: -161px,
+  x: 48px,
+  y: 171px,
+  offset-x: -48px,
+  offset-y: -171px,
   width: 24px,
   height: 26px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-modal-close: (
   name: 's-modal-close',
-  x: 113px,
-  y: 161px,
-  offset-x: -113px,
-  offset-y: -161px,
+  x: 21px,
+  y: 171px,
+  offset-x: -21px,
+  offset-y: -171px,
   width: 26px,
   height: 26px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-phone-grey: (
@@ -184,24 +184,24 @@ $s-phone-grey: (
   width: 19px,
   height: 33px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $s-phone: (
   name: 's-phone',
-  x: 92px,
-  y: 161px,
-  offset-x: -92px,
-  offset-y: -161px,
+  x: 0px,
+  y: 171px,
+  offset-x: 0px,
+  offset-y: -171px,
   width: 20px,
   height: 37px,
   total-width: 235px,
-  total-height: 206px,
+  total-height: 208px,
   image: '../img/sprite/png-sprite.png'
 );
 $spritesheet: (
   width: 235px,
-  height: 206px,
+  height: 208px,
   image: '../img/sprite/png-sprite.png',
   sprites: ($s-about-hover, $s-about, $s-advantages-hover, $s-advantages, $s-building-hover, $s-building, $s-contacts-hover, $s-contacts, $s-email, $s-emergency, $s-justice-hover, $s-justice, $s-man, $s-modal-close, $s-phone-grey, $s-phone, )
 );
