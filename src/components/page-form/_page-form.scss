@@ -121,6 +121,11 @@ form.page-form{
   align-items: center;
   background-color: rgba(255,255,255,.5);
 
+  .page-logo img{
+    margin: 0 auto;
+    width: 50%;
+  }
+
   .modal{
     border: 5px solid #b6777d ;
     background-color: rgba(0,0,0,.65);

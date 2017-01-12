@@ -97,7 +97,7 @@ figure.service-block{
         font-size: 20px;
       }
       @include mq($from: xs, $until: 340px) {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }
