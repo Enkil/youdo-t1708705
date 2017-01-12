@@ -64,7 +64,7 @@ function sendEmail($settings,$body){
     $mail = new PHPMailer();
 
     $mail->CharSet = 'UTF-8';
-    $mail->setFrom($settings['EmailFrom'] = "office@good-r.ru", '');
+    $mail->setFrom($settings['EmailFrom'], '');
 
     array_map(function ($email) use ($mail){
         $mail->addAddress($email);

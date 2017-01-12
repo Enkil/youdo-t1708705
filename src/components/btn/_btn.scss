@@ -23,8 +23,8 @@ a.btn{
   span{
     @include font-family('MinionPro-Regular');
     font-size: 36px;
-    @include mq($from: xs, $until: 340px) {
-      font-size: 30px;
+    @include mq($from: xs, $until: md) {
+      font-size: 24px;
     }
   }
 }
