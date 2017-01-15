@@ -17,7 +17,13 @@ $app['CallbackkillerID'] = '';
 $app['facebookPixel'] = '';
 $app['googleMapsApiKey'] = '';
 
+// Enable/disable sending form data services
+$settings['sendEmail'] = true;
 $settings['isSMTP'] = false;
+$settings['sendSMS'] = false;
+$settings['writeLocalFile'] = false;
+$settings['writeGoogleSheets'] = false;
+
 $settings['sypexGeoApiKey'] = '';
 $settings['smsRecipietns'] = '';
 $settings['smsRuApiKey'] = '';
