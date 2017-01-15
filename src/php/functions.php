@@ -63,6 +63,26 @@ function loadUtm(){
 function sendEmail($settings,$body){
     $mail = new PHPMailer();
 
+    if ($settings['isSMTP']){
+        $mail->isSMTP();
+
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        $mail->SMTPDebug = 4;
+        $mail->Host = $settings['EmailSMTPHosts'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $settings['EmailSMTPUser'];
+        $mail->Password = $settings['EmailSMTPPassword'];
+        $mail->SMTPSecure = $settings['EmailSMTPSecure'];
+        $mail->Port = $settings['EmailSMTPPort'];
+    }
+
     $mail->CharSet = 'UTF-8';
     $mail->setFrom($settings['EmailFrom'], '');
 

@@ -15,6 +15,7 @@ $app['yandexMetrika'] = '';
 $app['googleAnalytics'] = '';
 $app['CallbackkillerID'] = '';
 $app['facebookPixel'] = '';
+$app['googleMapsApiKey'] = '';
 
 $settings['sypexGeoApiKey'] = '';
 
