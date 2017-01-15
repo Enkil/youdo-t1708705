@@ -17,8 +17,8 @@ $app['CallbackkillerID'] = '';
 $app['facebookPixel'] = '';
 $app['googleMapsApiKey'] = '';
 
+$settings['isSMTP'] = false;
 $settings['sypexGeoApiKey'] = '';
-
 $settings['smsRecipietns'] = '';
 $settings['smsRuApiKey'] = '';
 $settings['smsMessage'] = " ";
