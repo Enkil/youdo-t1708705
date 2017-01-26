@@ -109,6 +109,7 @@ a:active {
 :root {
   font-family: 'Roboto',sans-serif;
   font-size: 16;
+  color: #333;
 }
 
 body {
@@ -271,6 +272,10 @@ main article.adv-item:first-child {
   margin-top: 0;
 }
 
+main article.adv-item a.title {
+  color: #333;
+}
+
 main article.adv-item h3 {
   margin-top: 0;
 }
@@ -303,7 +308,20 @@ main article.adv-item .right {
   margin-left: 10px;
 }
 
-main article.adv-item .right img {
+main article.adv-item .right a.photo {
+  display: block;
+  width: 100%;
+  -webkit-transition: all .325s ease 0s;
+  transition: all .325s ease 0s;
+}
+
+main article.adv-item .right a.photo:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+main article.adv-item .right a.photo img {
   display: block;
   width: 100%;
   min-width: 100px;
