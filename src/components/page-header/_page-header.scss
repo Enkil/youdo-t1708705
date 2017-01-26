@@ -1,134 +1,40 @@
-.page-header{
-  background-color: $main-bg;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 10;
+header.page-header{
 
-  @include mq($from: xs, $until: md) {
-    position: static;
-  }
-
-  .contacts{
-    display: flex;
-    flex-direction: column;
-
-    a.link{
-      @include font-family('MinionPro-Regular');
-      line-height: 1;
-      color: lighten($main-text,15%);
-      text-decoration: none;
-
-
-      &.-phone{
-        font-size: 30px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        @include mq($from: md, $until: lg) {
-          font-size: 20px;
-        }
-        @include mq($from: xs, $until: md) {
-          font-size: 24px;
-        }
-      }
-      &.-email{
-        font-size: 24px;
-        @include mq($from: md, $until: lg) {
-          font-size: 20px;
-        }
-      }
+  .logo-block{
+    margin: 0 -10px;
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 
-  ul.menu{
-    padding-left: 0;
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-
-    li.item{
-      //display: inline-block;
-      width: 115px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-
-      a.link{
-        @include font-family('MinionPro-Regular');
-        @include transition();
-        line-height: 1;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        color: $main-text;
-        text-decoration: none;
-        flex-direction: column;
-        cursor: pointer;
-        font-size: 19px;
-        @include mq($from: lg, $until: 1280px) {
-          font-size: 16px;
-        }
-        @include mq($from: md, $until: lg) {
-          font-size: 12px;
-        }
-
-        span{
-          margin-top: 20px;
-        }
-        &.-emergency span{
-          margin-top: 5px;
-        }
-
-        &:before{
-          content: '';
-          display: block;
-        }
-
-        &.-emergency:before{
-          @include sprite($s-emergency);
-        }
-        &.-about:before{
-          @include sprite($s-about);
-        }
-        &.-building:before{
-          @include sprite($s-building);
-        }
-        &.-justice:before{
-          @include sprite($s-justice);
-        }
-        &.-advantages:before{
-          @include sprite($s-advantages);
-        }
-        &.-contacts:before{
-          @include sprite($s-contacts);
-        }
-
-        &.-emergency:hover{
-          transform: scale(1.2);
-        }
-        &.-about:hover:before{
-          @include sprite($s-about-hover);
-        }
-        &.-building:hover:before{
-          @include sprite($s-building-hover);
-        }
-        &.-justice:hover:before{
-          @include sprite($s-justice-hover);
-        }
-        &.-advantages:hover:before{
-          @include sprite($s-advantages-hover);
-        }
-        &.-contacts:hover:before{
-          @include sprite($s-contacts-hover);
-        }
-
+  form.search-form{
+    width: 100%;
+    padding: 10px 0;
+    input.search{
+      width: 70%;
+      box-sizing: border-box;
+      font-family:$font-family;
+      font-size: 16px;
+      &::placeholder{
+        @include transition(text-indent,.5s);
+        font-family:$font-family;
+        font-size: 16px;
+        text-overflow:ellipsis;
+        text-indent: 0px;
+      }
+      &:focus::placeholder{
+        @include transition(text-indent,.5s);
+        text-indent: 500px;
       }
     }
+    button.submit{
+      width: 20%;
+      box-sizing: border-box;
+      font-family:$font-family;
+      font-size: 16px;
+    }
   }
+
 }

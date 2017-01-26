@@ -1,35 +1,12 @@
-include ../page-form/_mixin-page-form.pug
-
-footer.page-footer#contacts
-    .map-block
-        .map#map
-        .container.contacts-block
-            .row._justify-center
-                .column.-xs-3
-                    include ../page-logo/_page-logo--white.pug
-                .column.-xs-12.-md-4.-lg-3.-lg-offset-1
-                    p.address.
-                        Москва
-                        <br/>
-                        Черноморский бульвар, д.4
-                    a.link.-phone(href="tel:84956659224" title="Позвоните нам бесплатно") 8 495 665 92 24
-                    a.link.-email(href="mailto:office@good-r.ru" title="Напишите нам") office@good-r.ru
-                .column.-xs-12.-md-5.-lg-4.-lg-offset-1
-                    +page-form('Форма в подвале','Остались вопросы? Мы будем рады ответить!','-footer')
-
-    .container
-        .row
-            .column.-xs-12
-                .entity
-                    p Индивидуальный предприниматель Евтушенко Антон Александрович, ОГРНИП:315774600172601, ИНН:772072860002
-                        br
-                        a(href='agreement.php') Соглашение об обработке персональных данных
-
-.modal-block
-    .modal
-        span.close.js-modalClose
-        .container
-            .row._justify-center
-                .column.-xs-12.-md-6._text-center
-                    include ../page-logo/_page-logo--white.pug
-                    +page-form('Форма в модальном окне','Оставьте ваши контактные данные и мы свяжемся с вами через 2 минуты!','-modal')
+footer
+    .container.page-footer
+        .row._justify-beetwen
+            - for (var n=0; n<2; ++n)
+                .btn-group
+                    ul.menu
+                        - for (var i=0; i<3; ++i)
+                            li.item
+                                a(href="javascript:void(0)").link Кнопка меню
+        .row._d-flex._justify-center
+            span.copyright
+                | © Название компании 2017

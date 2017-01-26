@@ -1,31 +1,9 @@
-@include font-face('Airport-Regular', airport, regular, Airport);
-@include font-face('Bookos-Regular', bookos, regular, BOOKOS);
-@include font-face('Gothic-Regular', gothic, regular, GOTHIC);
-@include font-face('MinionPro-Regular', minion-pro, regular, MinionPro-Regular);
-@include font-face('Calibri-Regular', calibri, regular, calibri);
-
-h2.h2-title{
-  @include font-family('Bookos-Regular');
-  text-align: center;
-  font-size: 48px;
-  line-height: 48px;
-  margin-top: 48px;
-  margin-bottom: 65px;
-  @include mq($from: xs, $until: sm) {
-    font-size: 40px;
+a{
+  @include transition(color, .5s);
+  &:hover{
+    color: darkred;
   }
-}
-
-div.text{
-  p{
-    @include font-family('Calibri-Regular');
-    font-size: 28px;
-    line-height: 32px;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  span.attention{
+  &:active{
     color: red;
   }
 }

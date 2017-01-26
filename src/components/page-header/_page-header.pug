@@ -1,29 +1,16 @@
 header.page-header
     .container
+        .row._justify-beetwen
+            - for (var n=0; n<2; ++n)
+                .btn-group
+                    ul.menu
+                        - for (var i=0; i<3; ++i)
+                            li.item
+                                a(href="javascript:void(0)").link Кнопка меню
         .row
-            .column.-xs-4.-md-2._pl0
-                include ../page-logo/_page-logo.pug
-            .column.-xs-8.-md-3
-                .contacts
-                    a.link.-phone(href="tel:84956659224" title="Позвоните нам бесплатно") 8 495 665 92 24
-                    a.link.-email(href="mailto:office@good-r.ru" title="Напишите нам") office@good-r.ru
-            .column.-xs-7._pr0._pl0.-xs-stretch._sm-hidden-down
-                ul.menu
-                    li.item
-                        a.link.-emergency(href="index.php#emergency" title="Экстренная помощь")
-                            span Экстренная помощь
-                    li.item
-                        a.link.-about(href="index.php#about" title="О Нас")
-                            span О Нас
-                    li.item
-                        a.link.-building(href="#services" title="Недвижимость")
-                            span Недвижимость
-                    li.item
-                        a.link.-justice(href="#services" title="Юристы")
-                            span Юристы
-                    li.item
-                        a.link.-advantages(href="#advantages" title="Преимущества")
-                            span Преимущества
-                    li.item
-                        a.link.-contacts(href="#contacts" title="Контакты")
-                            span Контакты
+            .logo-block
+                img(src="http://placehold.it/640x150/dddddd?text=logo" alt="logotype")
+        .row
+            form.search-form._d-flex._justify-beetwen
+                input(type="search" placeholder="Поиск").search
+                button.submit Найти

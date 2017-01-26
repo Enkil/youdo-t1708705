@@ -44,17 +44,13 @@
     "imagemin-gifsicle": "^4.2.0",
     "imagemin-jpegoptim": "^4.1.0",
     "imagemin-pngquant": "^4.2.2",
-    "jquery": "^3.1.1",
-    "jquery-validation": "^1.16.0",
-    "jquery.inputmask": "^3.3.4",
     "lazypipe": "^1.0.1",
     "main-bower-files": "^2.11.1",
     "merge-stream": "^1.0.0",
     "node-notifier": "^4.5.0",
     "pug": "^2.0.0-alpha3",
     "require-dir": "^0.3.0",
-    "watchify": "^3.6.0",
-    "wow.js": "^1.2.2"
+    "watchify": "^3.6.0"
   },
   "scripts": {},
   "author": "Igor Timohin",

@@ -3,10 +3,10 @@
 // 3rd party
 @import
   "variables",
-  "vendor/normalize",
-  "vendor/mq",
-  "../vendor/flex-sass-grid-generator/src/scss/flex-sass-grid-generator",
-  "vendor/_animate.scss";
+  "vendor/normalize";
+  //"vendor/mq";
+  //"../vendor/flex-sass-grid-generator/src/scss/flex-sass-grid-generator",
+  //"vendor/_animate.scss";
 
 // Abstracts
 @import
@@ -23,11 +23,6 @@
 
 // Blocks
 @import "../components/page-header/page-header";
-@import "../components/page-logo/page-logo";
-@import "../components/lead-banner/lead-banner";
-@import "../components/page-text/page-text";
-@import "../components/btn/btn";
-@import "../components/page-services/page-services";
-@import "../components/page-advantages/page-advantages";
+@import "../components/categories/categories";
+@import "../components/ads/ads";
 @import "../components/page-footer/page-footer";
-@import "../components/page-form/page-form";

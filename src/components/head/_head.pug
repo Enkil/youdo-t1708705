@@ -5,7 +5,7 @@ head
     meta(charset="utf-8")
 
     // Set preload resources (https://w3c.github.io/resource-hints/)
-    link(rel="prefetch" href="fonts/airport/regular/Airport.otf")
+    //link(rel="prefetch" href="fonts/airport/regular/Airport.otf")
 
     // Main Meta information
     meta(http-equiv="content-type", content="text/html; charset=UTF-8")
@@ -76,36 +76,37 @@ head
 
     link(type="text/plain", rel="author", href="humans.txt")
 
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic")
     link(rel='stylesheet', href='css/app.min.css')
 
     // Site verification
-    meta( name="google-site-verification" content!="<?php echo $app['googleSiteVerification']; ?>")
-    meta( name="yandex-verification" content!="<?php echo $app['yandexVerification']; ?>")
+    //meta( name="google-site-verification" content!="<?php echo $app['googleSiteVerification']; ?>")
+    //meta( name="yandex-verification" content!="<?php echo $app['yandexVerification']; ?>")
 
     // Facebook Pixel Code
-    script.
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq)return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq)f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window,
-                document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '<?php echo $app['facebookPixel']; ?>', {
-            em: 'insert_email_variable,'
-        });
-        fbq('track', 'PageView');
-        fbq('track', 'Lead');
-    noscript
-        img(height="1" width="1" style="display:none" src!="https://www.facebook.com/tr?id=<?php echo $app['facebookPixel']; ?>&ev=PageView&noscript=1")
+    //script.
+    //    !function (f, b, e, v, n, t, s) {
+    //        if (f.fbq)return;
+    //        n = f.fbq = function () {
+    //            n.callMethod ?
+    //                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    //        };
+    //        if (!f._fbq)f._fbq = n;
+    //        n.push = n;
+    //        n.loaded = !0;
+    //        n.version = '2.0';
+    //        n.queue = [];
+    //        t = b.createElement(e);
+    //        t.async = !0;
+    //        t.src = v;
+    //        s = b.getElementsByTagName(e)[0];
+    //        s.parentNode.insertBefore(t, s)
+    //    }(window,
+    //            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    //    fbq('init', '<?php echo $app['facebookPixel']; ?>', {
+    //        em: 'insert_email_variable,'
+    //    });
+    //    fbq('track', 'PageView');
+    //    fbq('track', 'Lead');
+    //noscript
+    //    img(height="1" width="1" style="display:none" src!="https://www.facebook.com/tr?id=<?php echo $app['facebookPixel']; ?>&ev=PageView&noscript=1")

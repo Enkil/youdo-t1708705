@@ -60,14 +60,10 @@ $mq-breakpoints: (
 
 
 /*
-  Colors
+  Project variables
   ======
 */
-$body-bg: #ffffff;
-$main-bg: #f5b76f;
-$second-bg: #393d48;
-$main-text: #000000;
-$second-text: #ffffff;
-$btn-bg: #ff3b3d;
-$danger: #f4eccd;
-$success: #67e76c;
+$body-bg: #333333;
+$content-bg: #cccccc;
+$font-family: 'Roboto', sans-serif;
+$container: 640px;

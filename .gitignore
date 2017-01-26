@@ -152,3 +152,4 @@ fabric.properties
 ### NotepadPP template
 # Notepad++ backups #
 *.bak
+/error_log
