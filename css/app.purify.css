@@ -263,14 +263,14 @@ main article.adv-item .right {
 main article.adv-item .right a.photo {
   display: block;
   width: 100%;
-  -webkit-transition: all .325s ease 0s;
-  transition: all .325s ease 0s;
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
 }
 
 main article.adv-item .right a.photo:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
 }
 
 main article.adv-item .right a.photo img {
