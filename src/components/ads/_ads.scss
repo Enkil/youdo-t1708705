@@ -49,11 +49,11 @@ main{
     .right{
       margin-left: 10px;
       a.photo{
-        @include transition();
+        @include transition(all, .5s);
         display: block;
         width: 100%;
         &:hover{
-          transform: scale(1.2);
+          transform: scale(2);
         }
         img{
           display: block;
