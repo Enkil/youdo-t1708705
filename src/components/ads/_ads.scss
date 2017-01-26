@@ -15,6 +15,9 @@ main{
       margin-top: 0;
     }
 
+    a.title{
+      color: $dark;
+    }
     h3{
       margin-top: 0;
     }
@@ -45,12 +48,21 @@ main{
     }
     .right{
       margin-left: 10px;
-      img{
+      a.photo{
+        @include transition();
         display: block;
         width: 100%;
-        height: auto;
-        min-width: 100px;
+        &:hover{
+          transform: scale(1.2);
+        }
+        img{
+          display: block;
+          width: 100%;
+          height: auto;
+          min-width: 100px;
+        }
       }
+
     }
   }
 
