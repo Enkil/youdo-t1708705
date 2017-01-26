@@ -1,0 +1,23 @@
+# TEAM
+	Front-End developers: Igor Timohin
+	Back-End developers:
+	Site:
+	Contact: timohin.i [at] gmail.com
+	From: Russia
+	Location: Saint-Petersburg
+
+# ORGANISATION
+    Name:
+    Site:
+    Contact:
+
+# THANKS
+    School: http://epixx.ru
+
+# SITE
+	Language: Russian
+	Doctype: HTML5
+	Standards: HTML5, CSS3
+	Components: Sass, Jade/Pug, JavaScript, Normalize.css, SVG
+	IDE: PhpShtorm, Sublime Text
+    Software: Gulp, Git, GitHub Pages, Photoshop, Illustrator
